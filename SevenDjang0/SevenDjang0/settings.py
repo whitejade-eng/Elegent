@@ -55,6 +55,9 @@ ROOT_URLCONF = "SevenDjang0.urls"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
 
+STATIC_URL = '/static/'
+# STATIC_ROOT = os.path. join(BASE_DIR, 'static')
+STATICFILES_DIRS=[(os.path.join(BASE_DIR, 'static'))]
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
