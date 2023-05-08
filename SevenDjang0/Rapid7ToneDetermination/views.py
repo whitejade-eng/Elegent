@@ -57,6 +57,8 @@ class RapidUnloadFile(APIView):
     def post(self, request, *args, **kwargs):
         up_file = request.FILES.get('file')
         models.UploadFileModel(name=up_file.name, path=up_file).save()
+        # txt转写为excel 删除原txt文档
+        
         return HttpResponse('success')
 
 
